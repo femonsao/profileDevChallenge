@@ -1,0 +1,38 @@
+<div class="container">
+  <mat-card class="card">
+    <div class="user-content">
+      <div class="right-content">
+        <div class="user-foto">
+          <img src="./../../../assets/img/user.jpg" alt="" />
+        </div>
+        <div class="user-info">
+          <p>Robert Crow</p>
+          <span>@RobertC</span>
+        </div>
+      </div>
+      <div>
+        <button mat-raised-button class="edit-button">
+          <mat-icon class="edit-icon" aria-hidden="false" aria-label="Editar"
+            >edit</mat-icon
+          >
+          Editar
+        </button>
+      </div>
+    </div>
+    <div class="status-container">
+      <div *ngFor="let card of cardsInfo">
+        <mat-card
+          class="card-info"
+          [ngStyle]="{ 'background-color': card.color }"
+        >
+          <div class="card-title">
+            {{ card.title }}
+          </div>
+          <div class="card-value">
+            {{ card.value }}
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </mat-card>
+</div>
